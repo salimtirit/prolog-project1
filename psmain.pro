@@ -54,3 +54,10 @@ multiply_two_lists([], [], []).
 multiply_two_lists([H1|T1], [H2|T2], [Head|TailResult]) :-
     multiply_two_lists(T1, T2, TailResult),
     Head is H1*H2.
+
+%concatenate([], List, List).
+%concatenate([H1|T1], List2, Result) :-
+%    concatenate(T1, List2, TailResult),
+%    (
+%        (member(H1,TailResult),Result = TailResult,!);Result = [H1|TailResult]
+%    ).
