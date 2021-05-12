@@ -1,0 +1,49 @@
+glanian_distance(zhuirlu, josizar, D).
+D = 1.218001642035018.
+
+glanian_distance(josizar, zhuirlu, D).
+D = 0.8932983824008639.
+
+glanian_distance(olisor, calemi, D).
+D = 1.0484364549175118.
+
+glanian_distance(calemi, olisor, D).
+D = 1.2979672569059668.
+
+weighted_glanian_distance(zhuirlu, josizar, D).
+D = 0.7717511418844807.
+
+weighted_glanian_distance(josizar, zhuirlu, D).
+D = 0.4353217993622649.
+
+weighted_glanian_distance(olisor, calemi, D).
+D = 0.40758454337719924.
+
+weighted_glanian_distance(calemi, olisor, D).
+D = 0.9851317196192598.
+
+find_possible_cities(zhuirlu, CityList).
+CityList = [venis, beyroot, istenbol]
+
+find_possible_cities(josizar, CityList).
+CityList = [corse town, seviliri, viyan]
+
+merge_possible_cities(zhuirlu, josizar, CityList).
+CityList = [venis, beyroot, istenbol, corse town, seviliri, viyan]
+
+merge_possible_cities(zhuirlu, zhuirlu, CityList).
+CityList = [venis, beyroot, istenbol]
+
+find_mutual_activities(zhuirlu, josizar, ActivityList).
+ActivityList = []
+
+find_mutual_activities(zhuirzaz, josizar, ActivityList).
+ActivityList = [camping, swimming]
+
+find_possible_targets(zhuirlu, Distances, TargetList).
+Distances = [0.3006409819036653, 0.3238039530333131, 0.328,0.3493422390722312, 0.40817398251235953, 0.4136302696853797,0.4190071598433611, 0.42604577218885764, 0.427071422598141|...]
+TargetList = [golkolz, jai-blava, faeno, darcaluna, anfin, aidel, bloszen,]sheeanth, gallan|...]
+
+find_possible_targets(zhuirzaz, Distances, TargetList).
+Distances = [0.3532860031192857, 0.4758739328855911, 0.5260465758846834,0.5502290432174586, 0.5630337467683442, 0.5718933467002392,0.6119852939409575, 0.6136024771788328, 0.6186784302042538|...]
+TargetList = [angwispm, engsangu, ranaqri, wistur, stermilky, faevine,jodturv, wilkster, faezab|...].
