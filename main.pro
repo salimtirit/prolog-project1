@@ -77,8 +77,15 @@ find_possible_targets(Name, Distances, TargetList):-
 
 % 3.7 find_weighted_targets(Name, Distances, TargetList) 15 points
 
-
+find_weighted_targets(Name, Distances, TargetList):-
+    findall(TargetName,(glanian(TargetName,Gender,_),expects(Name,ExpectedGender,_),member(Gender,ExpectedGender)),TargetList1),
+    findall(Distance,(weighted_glanian_distance(Name,TargetName,Distance),member(TargetName,TargetList1)),Distances1),
+    make_tuples(Distances1,TargetList1,TargetList2),
+    msort(TargetList2, TargetList3),
+    break_tuples(TargetList3,Distances,TargetList).
 
 % 3.8 find_my_best_target(Name, Distances, Activities, Cities, Targets) 20 points
+
+
 
 % 3.9 find_my_best_match(Name, Distances, Activities, Cities, Targets) 25 points
