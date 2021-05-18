@@ -57,10 +57,27 @@ find_mutual_activities(Name1, Name2, MutualActivities):-
     intersection(LikedActivities1, LikedActivities2, MutualActivities).
 
 % 3.6 find_possible_targets(Name, Distances, TargetList) 10 points
+make_tuples([],[],[]).
+make_tuples([H1|T1],[H2|T2],[Head|TailResult]):-
+    make_tuples(T1,T2,TailResult),
+    Head = [H1,H2].
 
+break_tuples([],[],[]).
+break_tuples([Head|Tail],[H1|T1],[H2|T2]):-
+    break_tuples(Tail,T1,T2),
+    Head = [H1|T3],
+    T3 = [H2|_].
 
+find_possible_targets(Name, Distances, TargetList):-
+    findall(TargetName,(glanian(TargetName,Gender,_),expects(Name,ExpectedGender,_),member(Gender,ExpectedGender)),TargetList1),
+    findall(Distance,(glanian_distance(Name,TargetName,Distance),member(TargetName,TargetList1)),Distances1),
+    make_tuples(Distances1,TargetList1,TargetList2),
+    msort(TargetList2, TargetList3),
+    break_tuples(TargetList3,Distances,TargetList).
 
 % 3.7 find_weighted_targets(Name, Distances, TargetList) 15 points
+
+
 
 % 3.8 find_my_best_target(Name, Distances, Activities, Cities, Targets) 20 points
 
