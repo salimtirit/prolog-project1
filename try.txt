@@ -47,3 +47,11 @@ TargetList = [golkolz, jai-blava, faeno, darcaluna, anfin, aidel, bloszen,]sheea
 find_possible_targets(zhuirzaz, Distances, TargetList).
 Distances = [0.3532860031192857, 0.4758739328855911, 0.5260465758846834,0.5502290432174586, 0.5630337467683442, 0.5718933467002392,0.6119852939409575, 0.6136024771788328, 0.6186784302042538|...]
 TargetList = [angwispm, engsangu, ranaqri, wistur, stermilky, faevine,jodturv, wilkster, faezab|...].
+
+find_weighted_targets(zhuirlu, Distances, TargetList).
+Distances = [0.1385049818598595, 0.1692282511875603, 0.18459984019494705,0.2198129454786501, 0.2261861556329211, 0.24256776991183307,0.24317945842525432, 0.2508943801682293, 0.25718034333906625|...]
+TargetList = [jai-blava, golkolz, darcaluna, zazgo, brakea, sheeanth, lield,aidel, dignarv|...]
+
+find_weighted_targets(zhuirzaz, Distances, TargetList).
+Distances = [0.26687880957468313, 0.30606038946586994, 0.3115456467357552,0.3784484363820255, 0.3926651652489688, 0.40451883516098475,0.40884393844106337, 0.4164695787209433, 0.41727860117671983|...]
+TargetList = [angwispm, engsangu, stermilky, nyax, wistur, ranaqri, thali, dorfae, faezab|...]
